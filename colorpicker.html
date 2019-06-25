@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html langu="en">
 <head>
-  <title>MADISON</title>
+  <title>Madi</title>
   <meta charset="utf-8">
   <meta name="viewpoint" content="width=device-width, initial-scale=1">
 
@@ -13,13 +13,28 @@
   <!-- Our style sheet where we can customize parts of our page further -->
   <link rel="stylesheet" type="text/css" href="colorpicker.css">
 
+<script>
+function randomColor() {
+  var red = Math.floor(Math.random() *256);
+  var green = Math.floor(Math.random() *256);
+  var blue = Math.floor(Math.random() *256);
+
+  var divtoedit = document.getElementById('pickacolor');
+  divtoedit.style.backgroundColor = 'rgb(' +red+','+green+','+blue+')';
+
+  document.getElementById('colorGenerated').innerHTML = 'rgb(' +red+','+green+','+blue+')';
+
+}
+
+</script>
+
   </head>
 
 <body>
   <div class="container-fluid">
     <div class=row>
       <div class="col-sm-12">
-        About MADISON
+        <span id=title>About Madi</span>
         </div>
       </div>
       <div class=row>
@@ -27,6 +42,54 @@
           <img id=coverimage src="imgs/coverimage.jpg" alt="POP figure Baby Groot among plants">
         </div>
     </div>
+
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="halfrow">
+          My favorite number: <br/>
+          23
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="halfrow">
+          My favorite song is: Don't Lose Ur Head <br/>
+
+            <a href="https://youtu.be/CFnrmOhrUiY" target="_blank">Don't Lose Ur Head (feat. Christina Modestou)</a>
+
+        </div>
+      </div>
+    </div>
+
+<!-- row for color palette-->
+
+  <div class=row>
+      <div class="col-sm-2 offset-sm-1 color" id=color1>
+      </div>
+      <div class="col-sm-2 color" id=color2>
+      </div>
+      <div class="col-sm-2 color" id=color3>
+      </div>
+      <div class="col-sm-2 color" id=color4>
+      </div>
+      <div class="col-sm-2 color" id=color5>
+      </div>
+  </div>
+
+<!-- Row for the basic color generator -->
+
+<div class="row">
+  <div class="col-sm-12" id="pickacolor">
+    <button class="btn btn-default" onclick=randomColor()>
+      Get Random Color
+    </button>
+    <br/><br/>
+    <p id="colorGenerated"></p>
+  </div>
+</div>
+
+
   </div>
 
 </body>
