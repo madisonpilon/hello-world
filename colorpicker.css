@@ -19,6 +19,10 @@
   text-align: center;
 }
 
+#link{
+  color: rgb(161,159,89);
+}
+
 .color{
   height: 25vh;
 }
